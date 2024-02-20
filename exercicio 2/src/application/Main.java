@@ -12,8 +12,6 @@ public class Main {
         Locale.setDefault(Locale.US);
         Scanner scanner = new Scanner(System.in);
 
-        Product p = new Product();
-
         System.out.println("Enter a product data: ");
         System.out.print("Name: ");
         String productName = scanner.nextLine();
@@ -22,6 +20,12 @@ public class Main {
         double price = scanner.nextDouble();
 
         Product product = new Product(productName, price);
+
+        product.setProductName("Computer");
+        System.out.println("Updated product name: " +  product.getProductName());
+
+        product.setPrice(1200.00);
+        System.out.println("Updated price: " + product.getPrice());
 
         System.out.println();
         System.out.println("Product data: " + product);
