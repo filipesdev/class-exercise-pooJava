@@ -12,6 +12,8 @@ public class Main {
         Locale.setDefault(Locale.US);
         Scanner scanner = new Scanner(System.in);
 
+        Product p = new Product();
+
         System.out.println("Enter a product data: ");
         System.out.print("Name: ");
         String productName = scanner.nextLine();
@@ -19,17 +21,14 @@ public class Main {
         System.out.print("Price: ");
         double price = scanner.nextDouble();
 
-        System.out.print("Quantity in stock: ");
-        int quantity = scanner.nextInt();
-
-        Product product = new Product(productName, price, quantity);
+        Product product = new Product(productName, price);
 
         System.out.println();
         System.out.println("Product data: " + product);
 
         System.out.println();
         System.out.print("Enter the number of products to be added in stock: ");
-        quantity = scanner.nextInt();
+        int quantity = scanner.nextInt();
         product.addProducts(quantity);
 
         System.out.println();
