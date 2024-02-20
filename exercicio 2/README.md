@@ -12,3 +12,11 @@ estoque)
 Para resolver este problema, você deve criar uma CLASSE conforme projeto a seguir:
 
 ![img.png](img.png)
+
+## Proposta de melhoria 1:
+
+![img_1.png](img_1.png)
+
+## Proposta de melhoria 2:
+
+![img_2.png](img_2.png)
