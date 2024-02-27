@@ -22,10 +22,10 @@ public class Employee {
     public Double getSalary() {
         return salary;
     }
-    public void setSalary(Double salary) {
-        this.salary = salary;
-    }
     public void increaseSalary(double percentage) {
         this.salary = (percentage / 100 + 1) * getSalary();
+    }
+    public String toString() {
+        return getId() + ", " + getName() + ", U$" + String.format("%.2f", getSalary());
     }
 }
