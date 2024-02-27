@@ -13,17 +13,27 @@ public class Main {
         Locale.setDefault(Locale.US);
         Scanner scanner = new Scanner(System.in);
 
+
+        // reading data
+
         System.out.print("How many employees will be registered? ");
-        int registredEmployee = scanner.nextInt();
+        int registeredEmployee = scanner.nextInt();
 
         List<Employee> list = new ArrayList<>();
 
-        for (int i = 0; i<registredEmployee; i++) {
+        for (int i = 0; i<registeredEmployee; i++) {
 
             System.out.println("Employee #" + (i+1));
 
             System.out.print("ID: ");
             int id = scanner.nextInt();
+
+            for (Employee employee : list) {
+                while (employee.getId() == id) {
+                    System.out.print("ALERT: ID alredy exists! Enter another ID: ");
+                    id = scanner.nextInt();
+                }
+            }
 
             scanner.nextLine();
 
@@ -38,6 +48,9 @@ public class Main {
             list.add(new Employee(id, name, salary));
         }
 
+
+        // updating salary of given employee
+
         System.out.print("Enter the employee ID that will have salary increase: ");
         int userEnterId = scanner.nextInt();
 
@@ -47,10 +60,14 @@ public class Main {
                 double increaseSalary = scanner.nextDouble();
                 idEmployee.increaseSalary(increaseSalary);
                 break;
-            }
+            } else System.out.println("This ID does not exist");
         }
 
+
+
         System.out.println();
+
+        // listing employee
 
         System.out.println("List of employees:\n");
         for (Employee employee : list) {
