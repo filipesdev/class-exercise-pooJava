@@ -12,14 +12,14 @@ public class Main {
         int n = scanner.nextInt();
         int [][] mat = new int[n][n];
 
-        for (int i=0; i<n; i++) { // for para percorrer as linhas
-            for (int j=0; j<n; j++) {  // for para percorrer cada elemento da coluna e preencher a matriz
+        for (int i=0; i<mat.length; i++) { // for para percorrer as linhas
+            for (int j=0; j<mat[i].length; j++) {  // for para percorrer cada elemento da coluna e preencher a matriz
                 mat[i][j] = scanner.nextInt();
             }
         }
 
         System.out.println("Main diagonal: ");
-        for (int i = 0; i<n; i++) {
+        for (int i = 0; i<mat.length; i++) {
             System.out.print(mat[i][i] + " "); // pegando o número da linha i e da coluna i e imprimindo no terminal
             /*
           0  5 -3 10
@@ -31,8 +31,8 @@ public class Main {
         System.out.println();
 
         int countNegativeNumbers = 0;
-        for (int i=0; i<n; i++) {     // for para percorrer as linhas
-            for (int j=0; j<n; j++) { // for para percorrer cada elemento da coluna
+        for (int i=0; i<mat.length; i++) {     // for para percorrer as linhas
+            for (int j=0; j<mat[i].length; j++) { // for para percorrer cada elemento da coluna
                 if (mat[i][j] < 0) {  // se o elemento da matriz "mat" na linha i e na coluna j for menor que 0
                     countNegativeNumbers++; // variavel "countNegativeNumbers é incrementada
                 }
@@ -42,7 +42,5 @@ public class Main {
         System.out.println("Negative numbers = " + countNegativeNumbers);
 
         scanner.close();
-
     }
 }
-
