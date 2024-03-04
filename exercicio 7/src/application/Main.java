@@ -55,9 +55,14 @@ public class Main {
         LocalDateTime d09 = LocalDateTime.parse("04/03/2024 01:30", fmt2);
         System.out.println(d09); */
 
-        // instanciando o LocalDateTime passando dia, mês e ano isoladamente
+        /*
+        instanciando o LocalDate passando dia, mês e ano isoladamente
         LocalDate d10 = LocalDate.of(2024, 03,04);
-        System.out.println(d10);
+        System.out.println(d10); */
+
+        // instanciando o LocalDateTime passando dia, mês e ano com horário
+        LocalDateTime d11 = LocalDateTime.of(2024, 03, 04, 15, 44, 30);
+        System.out.println(d11);
 
     }
 }
