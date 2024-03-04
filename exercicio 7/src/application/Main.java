@@ -1,12 +1,16 @@
 package application;
 
+import java.time.DateTimeException;
 import java.time.Instant;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.Locale;
 
 public class Main {
     public static void main(String[] args) {
+
+        // https://docs.oracle.com/javase/jp/17/docs/api/java.base/java/time/format/DateTimeFormatter.html
 
         /*
         intanciando localdate a partir do horario atual
@@ -32,11 +36,17 @@ public class Main {
         LocalDateTime d05 = LocalDateTime.parse("2024-03-04T15:20:26");
         System.out.println(d05); */
 
-        // intanciando o Instant.parse com o padrão UTC
+        /* intanciando o Instant.parse com o padrão UTC
         Instant d06 = Instant.parse("2024-03-04T15:20:26Z");
         System.out.println(d06);
+
         Instant d07 = Instant.parse("2024-03-04T15:20:26-03:00");
-        System.out.println(d07);
+        System.out.println(d07); */
+
+        // instanciando o LocalDate usando o DateTimeFormatter
+        DateTimeFormatter fmt1 = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+        LocalDate d08 = LocalDate.parse("04/03/2024", fmt1);
+        System.out.println(d08);
 
     }
 }
