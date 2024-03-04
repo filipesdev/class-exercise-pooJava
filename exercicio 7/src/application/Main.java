@@ -43,10 +43,17 @@ public class Main {
         Instant d07 = Instant.parse("2024-03-04T15:20:26-03:00");
         System.out.println(d07); */
 
-        // instanciando o LocalDate usando o DateTimeFormatter
+
+        /*
+        instanciando o LocalDate usando o DateTimeFormatter
         DateTimeFormatter fmt1 = DateTimeFormatter.ofPattern("dd/MM/yyyy");
         LocalDate d08 = LocalDate.parse("04/03/2024", fmt1);
-        System.out.println(d08);
+        System.out.println(d08); */
+
+        // instanciando o LocalDateTime usando o DateTimeFormatter
+        DateTimeFormatter fmt2 = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm");
+        LocalDateTime d09 = LocalDateTime.parse("04/03/2024 01:30", fmt2);
+        System.out.println(d09);
 
     }
 }
