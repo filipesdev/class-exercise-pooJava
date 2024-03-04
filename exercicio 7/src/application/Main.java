@@ -28,9 +28,15 @@ public class Main {
         LocalDate d04 = LocalDate.parse("2024-03-04");
         System.out.println(d04); */
 
-        // intanciando um texto ISO 8601 e gerando Data-Hora-Time apartir dele"
+        /* intanciando um texto ISO 8601 e gerando Data-Hora-Time apartir dele"
         LocalDateTime d05 = LocalDateTime.parse("2024-03-04T15:20:26");
-        System.out.println(d05);
+        System.out.println(d05); */
+
+        // intanciando o Instant.parse com o padrão UTC
+        Instant d06 = Instant.parse("2024-03-04T15:20:26Z");
+        System.out.println(d06);
+        Instant d07 = Instant.parse("2024-03-04T15:20:26-03:00");
+        System.out.println(d07);
 
     }
 }
