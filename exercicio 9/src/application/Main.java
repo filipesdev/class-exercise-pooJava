@@ -25,7 +25,8 @@ public class Main {
         System.out.println("r4 = " + r4);
 
         System.out.println("d04 dia = " + d04.getDayOfMonth());
-        System.out.println("d04 dia = " + d04.getMonthValue());
+        System.out.println("d04 mês = " + d04.getMonthValue());
+        System.out.println("d04 ano = " + d04.getYear());
 
     }
 }
