@@ -28,5 +28,8 @@ public class Main {
         System.out.println("d04 mês = " + d04.getMonthValue());
         System.out.println("d04 ano = " + d04.getYear());
 
+        System.out.println("d05 hora = " + d05.getHour());
+
+
     }
 }
