@@ -13,12 +13,16 @@ public class Main {
         Instant d06 = Instant.parse("2024-04-03T01:30:26Z");
 
         LocalDate r1 = LocalDate.ofInstant(d06, ZoneId.systemDefault());  //convertendo data-hora local considerando o fuso horário da máquina atual baseado no Instant
-
         LocalDate r2 = LocalDate.ofInstant(d06, ZoneId.of("Portugal")); //convertendo data-hora local considerando o fuso horário de Portugal baseado no Instant
+
+        LocalDateTime r3 = LocalDateTime.ofInstant(d06, ZoneId.systemDefault()); //convertendo data-hora-time local considerando o fuso horário de Portugal baseado no Instant
+        LocalDateTime r4 = LocalDateTime.ofInstant(d06, ZoneId.of("Portugal")); //convertendo data-hora-time local considerando o fuso horário de Portugal baseado no Instant
+
         System.out.println("r1 = " + r1);
         System.out.println("r2 = " + r2);
 
-
+        System.out.println("r3 = " + r3);
+        System.out.println("r4 = " + r4);
 
     }
 }
