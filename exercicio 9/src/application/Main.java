@@ -8,13 +8,15 @@ import java.time.ZoneId;
 public class Main {
     public static void main(String[] args) {
 
-        LocalDate d04 = LocalDate.parse("2024-04-03");
+        LocalDate d04 = LocalDate.parse("2024-05-03");
         LocalDateTime d05 = LocalDateTime.parse("2024-04-03T01:30:26");
         Instant d06 = Instant.parse("2024-04-03T01:30:26Z");
 
-        LocalDate r1 = LocalDate.ofInstant(d06, ZoneId.systemDefault());  // Convertendo data-hora local considerando o fuso horário da máquina atual
+        LocalDate r1 = LocalDate.ofInstant(d06, ZoneId.systemDefault());  //convertendo data-hora local considerando o fuso horário da máquina atual baseado no Instant
 
+        LocalDate r2 = LocalDate.ofInstant(d06, ZoneId.of("Portugal")); //convertendo data-hora local considerando o fuso horário de Portugal baseado no Instant
         System.out.println("r1 = " + r1);
+        System.out.println("r2 = " + r2);
 
 
 
