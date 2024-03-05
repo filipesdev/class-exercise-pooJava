@@ -1,5 +1,6 @@
 package application;
 
+import java.time.Duration;
 import java.time.Instant;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
@@ -19,6 +20,9 @@ public class Main {
         System.out.println("pastWeekLocalDate = " + pastWeekLocalDate);
         System.out.println("nextWeekLocalDate = " + nextWeekLocalDate);
 
+        Duration t1 = Duration.between(pastWeekLocalDate.atStartOfDay(), d04.atStartOfDay()); // LocalDate não suporta segundos. precisa converter para LocalDateTime
+        System.out.println("t1 dias = " + t1.toDays());
+
         System.out.println("--------------------------------------------------------");
 
         LocalDateTime pastWeekLocalDateTime = d05.minusDays(7);
@@ -30,6 +34,9 @@ public class Main {
         System.out.println("nextWeekLocalDateTime = " + nextWeekLocalDateTime);
         System.out.println("nextHourLocalDateTime = " + nextHourLocalDateTime);
 
+        Duration t2 = Duration.between(pastWeekLocalDateTime, d05);
+        System.out.println("t2 horas = " + t2.toHours());
+
         System.out.println("--------------------------------------------------------");
 
         Instant pastWeekInstant = d06.minus(7, ChronoUnit.DAYS);
@@ -37,5 +44,12 @@ public class Main {
 
         System.out.println("pastWeekInstant = " + pastWeekInstant);
         System.out.println("nextWeekInstant = " + nextWeekInstant);
+
+        Duration t3 = Duration.between(pastWeekInstant, d06);
+        System.out.println("t3 segundos = " + t3.toSeconds());
+
+        Duration t4 = Duration.between(d06,pastWeekInstant);
+        System.out.println("t4 segundos = " + t4.toSeconds());
+
     }
 }
